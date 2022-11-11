@@ -1,8 +1,10 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:minggu9_29/controller/demoControl.dart';
-import 'view/demoPage.dart';
+import 'view/DemoPage.dart';
 import 'view/home.dart';
 
 void main() async {
@@ -12,7 +14,6 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   final DemoController ctrl = Get.put(DemoController());
-
   @override
   Widget build(BuildContext context) {
     return SimpleBuilder(builder: (_) {

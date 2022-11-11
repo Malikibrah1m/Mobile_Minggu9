@@ -1,10 +1,8 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:get/instance_manager.dart';
 import 'package:minggu9_29/controller/demoControl.dart';
-import 'package:minggu9_29/controller/purchase.dart';
+import '/controller/purchase.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/get_core.dart';
@@ -35,11 +33,8 @@ class HomePage extends StatelessWidget {
                 children: [
                   Stack(
                     children: [
-                      Icon(
-                        Icons.shopping_cart_rounded,
-                        size: 40,
-                        color: Colors.white,
-                      ),
+                      Icon(Icons.shopping_cart_rounded,
+                          size: 40, color: Colors.white),
                       Positioned(
                         right: 5,
                         child: Container(
@@ -76,7 +71,7 @@ class HomePage extends StatelessWidget {
                   IconButton(
                       onPressed: () => Get.toNamed('/cart',
                           arguments:
-                              "Home Page To Demo Page -> Passing Arguments"),
+                              "Home Page To Demo Page -> Passing arguments"),
                       icon: Icon(
                         Icons.arrow_forward_ios_rounded,
                         color: Colors.white,
@@ -101,7 +96,7 @@ class HomePage extends StatelessWidget {
                       child: Column(
                         children: [
                           Image.network(
-                            'https://img.alicdn.com/tfs/TB1e.XyRel2gK0jSZFmXXc7iXXa-990-400.png',
+                            'https://img.alicdn.com/tfs/TB1e.XyReL2gK0jSZFmXXc7iXXa-990-400.png',
                             fit: BoxFit.cover,
                           ),
                           Row(
@@ -145,7 +140,7 @@ class HomePage extends StatelessWidget {
                                           fontWeight: FontWeight.normal,
                                           fontSize: 12.0),
                                     )),
-                              )
+                              ),
                             ],
                           ),
                         ],

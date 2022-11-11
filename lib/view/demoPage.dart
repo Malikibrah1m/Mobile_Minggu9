@@ -4,7 +4,6 @@ import 'package:minggu9_29/controller/demoControl.dart';
 
 class DemoPage extends StatelessWidget {
   final DemoController ctrl = Get.find();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,17 +17,18 @@ class DemoPage extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(Get.arguments()),
+              child: Text(Get.arguments),
             ),
             SwitchListTile(
               value: ctrl.isDark,
-              title: Text("Touch To Change ThemeMode"),
+              title: Text("Touch to change TheMode"),
               onChanged: ctrl.changeTheme,
             ),
             ElevatedButton(
                 onPressed: () => Get.snackbar(
-                    "SnackBar", "Hello This Is The Snackbar Message",
+                    "Snackbar", "Hello this is the Snackbar message",
                     snackPosition: SnackPosition.BOTTOM,
+                    colorText: Colors.white,
                     backgroundColor: Colors.black87),
                 child: Text('Snack Bar')),
             ElevatedButton(
@@ -43,11 +43,11 @@ class DemoPage extends StatelessWidget {
                       height: 150,
                       color: Colors.white,
                       child: Text(
-                        'Hello From Bottom WSheet',
+                        'Hello, From BottomSheet',
                         style: TextStyle(fontSize: 30.0),
                       ),
                     )),
-                child: Text('Bottom Sheet')),
+                child: Text('BottomSheet')),
             ElevatedButton(
                 onPressed: () => Get.offNamed('/'),
                 child: Text('Back To Home')),
